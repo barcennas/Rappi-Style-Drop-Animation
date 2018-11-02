@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RappiLikeDropAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-qJ-33Y">
+                                <rect key="frame" x="20" y="135.66666666666663" width="335" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Tug-Cr-dCq"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UbD-PV-FsA">
+                                    <size key="itemSize" width="97" height="106"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="bm4-Ws-I6K" customClass="ItemCell" customModule="RappiLikeDropAnimation" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="97" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jbo-4b-AkD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="86"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0u4-JS-SUM">
+                                                    <rect key="frame" x="0.0" y="86" width="97" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="olq-ZM-gjm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="0u4-JS-SUM" secondAttribute="bottom" id="2mG-E6-QB8"/>
+                                            <constraint firstItem="0u4-JS-SUM" firstAttribute="leading" secondItem="bm4-Ws-I6K" secondAttribute="leading" id="Ehw-HY-Ak1"/>
+                                            <constraint firstItem="Jbo-4b-AkD" firstAttribute="top" secondItem="bm4-Ws-I6K" secondAttribute="top" id="fgN-wD-XuR"/>
+                                            <constraint firstItem="0u4-JS-SUM" firstAttribute="top" secondItem="Jbo-4b-AkD" secondAttribute="bottom" id="sff-fD-7NL"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jbo-4b-AkD" secondAttribute="trailing" id="tDD-Je-kBU"/>
+                                            <constraint firstItem="Jbo-4b-AkD" firstAttribute="leading" secondItem="bm4-Ws-I6K" secondAttribute="leading" id="xqt-id-5co"/>
+                                            <constraint firstAttribute="trailing" secondItem="0u4-JS-SUM" secondAttribute="trailing" id="yjS-TR-Atp"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imgItem" destination="Jbo-4b-AkD" id="071-tS-iFx"/>
+                                            <outlet property="lblName" destination="0u4-JS-SUM" id="WId-wG-rtV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basket" translatesAutoresizingMaskIntoConstraints="NO" id="Wgl-B0-6Hi">
+                                <rect key="frame" x="0.0" y="692" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="lss-g9-F4r"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the items to the basket " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzn-jx-Vz6">
+                                <rect key="frame" x="20" y="63.999999999999993" width="335" height="31.666666666666664"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dzn-jx-Vz6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2mB-JK-6yD"/>
+                            <constraint firstItem="s7a-qJ-33Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="At4-em-4Cm"/>
+                            <constraint firstItem="s7a-qJ-33Y" firstAttribute="top" secondItem="dzn-jx-Vz6" secondAttribute="bottom" constant="40" id="I3D-gb-cRf"/>
+                            <constraint firstAttribute="bottom" secondItem="Wgl-B0-6Hi" secondAttribute="bottom" constant="20" id="KrA-bT-2gH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dzn-jx-Vz6" secondAttribute="trailing" constant="20" id="L98-cJ-Kzf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s7a-qJ-33Y" secondAttribute="trailing" constant="20" id="MmX-LT-ZUH"/>
+                            <constraint firstItem="Wgl-B0-6Hi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XFy-9w-zHe"/>
+                            <constraint firstItem="dzn-jx-Vz6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h6K-SB-hgX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wgl-B0-6Hi" secondAttribute="trailing" id="zoa-dy-0O6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionItem" destination="s7a-qJ-33Y" id="JtE-Rc-LMZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="basket" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
+</document>
